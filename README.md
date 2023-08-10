@@ -26,4 +26,4 @@ Automatización de una prueba al sitio web "demoblaze".
 
 4. Información adicional
    - Hay que darle tiempo al IDE para que cargue las dependencias del "build.gradle", una vez se han establecido las dependencias, todas las librerías importadas se activan y se logra correr la prueba.
-   - Se corrió con el Gradle 7.6.1 descargado manualmente y con el JDK 17, extitosamente.
+   - Con el Gradle 7.6.1 descargado manualmente y con el JDK 17, luego de clonar el proyecto y abrirlo con Intellij... Se logró correr exitosamente la prueba.
