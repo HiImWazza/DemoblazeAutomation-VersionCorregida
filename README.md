@@ -4,8 +4,8 @@ Automatización de una prueba al sitio web "demoblaze".
 1. Prerequisitos:
   - Maquina local con el sistema operativo Windows 11
   - IDE: IntelliJ IDEA 2023.2 (Ultimate Edition):
-        - Runtime version: 17.0.7+7-b1000.6 amd64
-        - VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
+    - Runtime version: 17.0.7+7-b1000.6 amd64
+    - VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
   - Gradle versión 7.6.1: https://gradle.org/next-steps/?version=7.6.2&format=all 
   - correto-17 Amazon Correto Version 17.0.8 (Una opción de JDK ofrecida por IntelliJ)
 
