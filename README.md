@@ -23,7 +23,6 @@ Automatización de una prueba al sitio web "demoblaze".
   - Asegurarse de que no haya errores en el código por falta de importar alguna librería.
   - Correr la clase "BuyProductRunner" que est'a ubicado en: "DemoblazeAutomation-master/src/test/java/runners/BuyProductRunner.java"
   - Ver el reporte que se genera en: "DemoblazeAutomation-VersionCorregida-main/target/site/serenity/index.html"
-  - 
 
 4. Información adicional
    - Hay que darle tiempo al IDE para que cargue las dependencias del "build.gradle", una vez se han establecido las dependencias, todas las librerías importadas se activan y se logra correr la prueba.
