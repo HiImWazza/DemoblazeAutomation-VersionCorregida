@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9359db0b3e31306f2efe24994b1639a8f1659643f76e6707d3902a094631ebbc.html">Buy Product</a></span>
+                > <span class="truncate-60"><a
+                    href="c1873406cfc3c6af732517ae3fea9c240bf16f15145be0db4b0276f3df8077b8.html">Successful Purchase </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-08-2023 15:23</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Buy Product </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I as a common user, need to buy a product
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Successful Purchase
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" Given the user enters the web page" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" User opens the browser at https://www.demoblaze.com/" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" Given the user enters the web page (completed)" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" When the user adds two products to the cart and has placed an order" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" User buy product" width="0"/>
+                <img src="66616bb5b4f6fa3477b7ec998ecd5904ff3ec01736373e352257655f58e93b26.png" title=" User clicks on Product link that leads to product single page" width="0"/>
+                <img src="aaf7cd40f6c10bdaf9caa63f6218225dd5f10a03ae871c93dcd8031279934e20.png" title=" User clicks on Product link that leads to product single page (completed)" width="0"/>
+                <img src="aaf7cd40f6c10bdaf9caa63f6218225dd5f10a03ae871c93dcd8031279934e20.png" title=" User clicks on Add to Cart Button" width="0"/>
+                <img src="df2743e186a38c0b09b13ac76e02ad2ce23f1eb3707d583270bed3b168cde460.png" title=" User clicks on Add to Cart Button (completed)" width="0"/>
+                <img src="5874ad39e41964274433c1e189ad4a639357426db8eeb27fec89989e72245ec7.png" title=" User clicks on HOME Button" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" User clicks on HOME Button (completed)" width="0"/>
+                <img src="aaf7cd40f6c10bdaf9caa63f6218225dd5f10a03ae871c93dcd8031279934e20.png" title=" User clicks on Product link that leads to product single page" width="0"/>
+                <img src="aaf7cd40f6c10bdaf9caa63f6218225dd5f10a03ae871c93dcd8031279934e20.png" title=" User clicks on Add to Cart Button" width="0"/>
+                <img src="15f41455f63fe9bee4c8e4aac70e24f62e816cb491298e7ef85708ceeceb527c.png" title=" User clicks on Add to Cart Button (completed)" width="0"/>
+                <img src="9a39668131c1e8cffb0e17cbd89e06545ced46ee9f224ae2cb60604229199488.png" title=" User clicks on Button that leads to the cart page" width="0"/>
+                <img src="6df1f3a02e39e0b6e473dc96f70569210195ed4fffed272db4005bb53d128962.png" title=" User clicks on Button that leads to the cart page (completed)" width="0"/>
+                <img src="6df1f3a02e39e0b6e473dc96f70569210195ed4fffed272db4005bb53d128962.png" title=" User clicks on Button to place the order" width="0"/>
+                <img src="02ecd30af4c764b28eb375836209c6f5bf79b51665a355ad8e99a7c57b518010.png" title=" User clicks on Button to place the order (completed)" width="0"/>
+                <img src="02ecd30af4c764b28eb375836209c6f5bf79b51665a355ad8e99a7c57b518010.png" title=" User enters 'Actor' into Input that expects a name in string" width="0"/>
+                <img src="c5d7f65a969355b758f01069bf7fa6fb00db43d1a970932d40a0c2f489936902.png" title=" User enters 'Actor' into Input that expects a name in string (completed)" width="0"/>
+                <img src="c5d7f65a969355b758f01069bf7fa6fb00db43d1a970932d40a0c2f489936902.png" title=" User enters 'Ecuador' into Input that expects a country in string" width="0"/>
+                <img src="5459a90b6805d1c82630c832444a4116d8b37dfddbb42c8ab4dcad0e31966a27.png" title=" User enters 'Ecuador' into Input that expects a country in string (completed)" width="0"/>
+                <img src="5459a90b6805d1c82630c832444a4116d8b37dfddbb42c8ab4dcad0e31966a27.png" title=" User enters 'Guayaquil' into Input that expects a city in string" width="0"/>
+                <img src="b039254629ff477b2ccdd69f209782c11af99154c3d1f569b477d441b5229ad9.png" title=" User enters 'Guayaquil' into Input that expects a city in string (completed)" width="0"/>
+                <img src="b039254629ff477b2ccdd69f209782c11af99154c3d1f569b477d441b5229ad9.png" title=" User enters '0123456789' into Input that expects a card in number" width="0"/>
+                <img src="6e1d3c7efeace2a352d2c66639a2a60b91bffddb5ca58fce6110632c472d2a7f.png" title=" User enters '0123456789' into Input that expects a card in number (completed)" width="0"/>
+                <img src="6e1d3c7efeace2a352d2c66639a2a60b91bffddb5ca58fce6110632c472d2a7f.png" title=" User enters '12' into Input that expects a month in number" width="0"/>
+                <img src="6dba880b1bdb8ea3e4690e5adf03d948bfc71a5da06b1a98036219fb3a59fd3f.png" title=" User enters '12' into Input that expects a month in number (completed)" width="0"/>
+                <img src="6dba880b1bdb8ea3e4690e5adf03d948bfc71a5da06b1a98036219fb3a59fd3f.png" title=" User enters '2023' into Input that expects a year in number" width="0"/>
+                <img src="94bedff7d2611cd01ca6922b85c92996e2ada930e80ecd5dd5240ce83426a677.png" title=" User enters '2023' into Input that expects a year in number (completed)" width="0"/>
+                <img src="94bedff7d2611cd01ca6922b85c92996e2ada930e80ecd5dd5240ce83426a677.png" title=" User clicks on Button that submits the purchase" width="0"/>
+                <img src="43e262a60a65992c2c2b7076572f95b40420c184937e5e0e41cd61bfc4d22620.png" title=" User clicks on Button that submits the purchase (completed)" width="0"/>
+                <img src="875f1e8124770dc13131aecc3ace5cf42829c26832bc51423a7dbe4c438499b4.png" title=" User clicks on Button that accepts the confirmation of your successful purchase" width="0"/>
+                <img src="50ca4f6590ce0b19fe83eb1b9ecb03f6f87054d1cac560b9b8405dcf1aec7694.png" title=" User clicks on Button that accepts the confirmation of your successful purchase (completed)" width="0"/>
+                <img src="20d2414284decd63b81c7fdbf142068cbc2f723f672543388d3cc19c1ef048b4.png" title=" Then the user has purchased the products successfully" width="0"/>
+                <img src="20d2414284decd63b81c7fdbf142068cbc2f723f672543388d3cc19c1ef048b4.png" title=" Then compare categories should be 'CATEGORIES'" width="0"/>
+                <img src="20d2414284decd63b81c7fdbf142068cbc2f723f672543388d3cc19c1ef048b4.png" title=" Then the user has purchased the products successfully (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.8</span>
+</div>
+</body>
+</html>
