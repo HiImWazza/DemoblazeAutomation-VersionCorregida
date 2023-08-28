@@ -18,6 +18,9 @@ Automatización de una prueba al sitio web "demoblaze".
   - Cambiar el path de la versión de Gradle en IntelliJ:
     - En IntelliJ ir a: File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle -> Gradle Projects -> Gradle -> Distribution
     - Escoger la opción "Local installation" y corregir el path a donde usted haya ubicado la instalación de Gradle. (En mi caso: "C:/Gradle/gradle-7.6.1")
+  - Verificar que la versión del "chromedriver.exe" en la raíz del proyecto ("DemoblazeAutomation-VersionCorregida-main/chromedriver.exe") soporta la versión actual de su navegador Chrome.
+    - En mi caso, como tengo la versión de Chrome (Version 116.0.5845.111 (Official Build) (64-bit)), le añadí el chromedriver con versión (Version: 116.0.5845.96 (r1160321) - para Windows 64).
+    - Verificar que el "chromedriver.exe" esté aloja do en la raíz del proyecto, puesto que si no, Gradle al instanciar la prueba (al ejecutarla) no encontrará el archivo.
   - Cargar los cambios de Gradle en "build.gradle": Ctrl+Mayús+O (en Windows ) ... "Load Gradle Changes" 
   - Esperar a que el IDE importe las librerías correctamente (que gradle logre cargar las dependencias)
   - Asegurarse de que no haya errores en el código por falta de importar alguna librería.
